@@ -9,7 +9,7 @@ import "fmt"
 
 // Function that modifies the original variable using a pointer
 func double(n *int) {
-	*n = *n * 2 // deferencing the pointer to modify the value
+	*n = *n * 2 // dereferencing the pointer to modify the value
 }
 
 // You can't swap two numbers in Go using a function unless you use pointers.
