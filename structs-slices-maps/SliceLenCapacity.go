@@ -8,21 +8,21 @@ import "fmt"
 // You can extend a slice's length by re-slicing it, provided it has sufficient capacity.
 func main() {
 	s := []int{2, 3, 5, 7, 11, 13}
-	printSlice(s)
+	printSlice3(s)
 
 	// Slice the slice to give it zero length.
 	s = s[:0]
-	printSlice(s)
+	printSlice3(s)
 
 	// Extend its length.
 	s = s[:4]
-	printSlice(s)
+	printSlice3(s)
 
 	// Drop its first two values.
 	s = s[2:]
-	printSlice(s)
+	printSlice3(s)
 }
 
-func printSlice(s []int) {
+func printSlice3(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
