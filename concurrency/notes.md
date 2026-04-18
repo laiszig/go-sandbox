@@ -92,5 +92,5 @@ no corresponding receiver
 sender go routine sends and can keep sending, up to the capacity of the channel
 it gets blocked if the channel is full. then it has to wait for the data to be received so that it can send more.
 
-
+Allows parent go routine to cancel its children - Done Channel
 
