@@ -81,7 +81,7 @@ default (unbuffered) - used to perform synchronous communication between gorouti
 guarantees an exchange is performed at the instant the send and receive actions happen
 ![img.png](img/unbuffered-channel.png)
 Sending go routine is blocked until there's a receiver receiving the data from the unbuffered channel
-Once the receiving receives the data, the sending go routine is no longer blocked
+Once the receiver receives the data, the sending go routine is no longer blocked
 
 buffered - way to make communication asynchronous
 queue-like functionality
@@ -92,5 +92,9 @@ no corresponding receiver
 sender go routine sends and can keep sending, up to the capacity of the channel
 it gets blocked if the channel is full. then it has to wait for the data to be received so that it can send more.
 
-Allows parent go routine to cancel its children - Done Channel
+Done Channel - Allows parent go routine to cancel its children 
 
+----
+
+They key is to remove structural barriers to parallelism
+Study real-world systems for inspiration
